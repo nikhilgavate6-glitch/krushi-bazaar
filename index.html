@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <title>Krushi Bazaar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      color: #2e7d32;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+    button {
+      background: #2e7d32;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌾 Krushi Bazaar</h1>
+  <p>शेतकरी आणि खरेदीदारांसाठी सोपं डिजिटल मार्केट</p>
+</header>
+
+<section>
+
+  <div class="card">
+    <h2>👨‍🌾 शेतकरी – माल नोंदणी</h2>
+
+    <label>मालाचा प्रकार</label>
+    <select id="product">
+      <option value="">निवडा</option>
+      <option value="कांदा">कांदा</option>
+      <option value="बटाटा">बटाटा</option>
+      <option value="गहू">गहू</option>
+      <option value="बाजरी">बाजरी</option>
+    </select>
+
+    <label>वजन (क्विंटल)</label>
+    <input type="number" id="weight" placeholder="उदा. 10">
+
+    <label>मोबाईल नंबर</label>
+    <input type="tel" id="mobile" placeholder="10 अंकी नंबर">
+
+    <button onclick="sendFarmer()">📲 WhatsApp वर पाठवा</button>
+  </div>
+
+  <div class="card">
+    <h2>🏪 खरेदीदार</h2>
+    <p>थेट शेतकऱ्यांशी संपर्क साधा</p>
+    <button onclick="sendBuyer()">📲 WhatsApp संपर्क</button>
+  </div>
+
+</section>
+
+<script>
+function sendFarmer(){
+  var product = document.getElementById("product").value;
+  var weight = document.getElementById("weight").value;
+  var mobile = document.getElementById("mobile").value;
+
+  if(product=="" || weight=="" || mobile==""){
+    alert("कृपया सगळी माहिती भरा");
+    return;
+  }
+
+  var msg =
+  "🌾 Krushi Bazaar माल नोंद\n\n" +
+  "माल: " + product + "\n" +
+  "वजन: " + weight + " क्विंटल\n" +
+  "शेतकरी मोबाईल: " + mobile;
+
+  window.open(
+    "https://wa.me/917020279612?text=" + encodeURIComponent(msg),
+    "_blank"
+  );
+}
+
+function sendBuyer(){
+  var msg =
+  "🏪 Krushi Bazaar Buyer Inquiry\n\n" +
+  "मला शेतमाल खरेदी करायचा आहे.";
+
+  window.open(
+    "https://wa.me/917020279612?text=" + encodeURIComponent(msg),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+                             </html>
