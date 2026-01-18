@@ -50,37 +50,84 @@
 </head>
 
 <body>
-<!-- SPLASH SCREEN START -->
-<div id="splash" style="
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#ffffff;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-z-index:9999;
-">
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krushi Bazaar</title>
 
-<img src="splash.png"
- style="
-     width:100%;
-     height:100%;
-     object-fit:cover;
-     ">
-<h2 style="margin-top:15px;color:#2e7d32;">
-Krushi Bazaar
-</h2>
+<style>
+/* ===== SPLASH SCREEN ===== */
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-<p style="color:gray;">
-थेट शेतातून खरेदी<br>
-शेतकऱ्याला योग्य भाव
-</p>
+/* Full screen image */
+#splash-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+/* App Name (Top) */
+#splash-title {
+  position: absolute;
+  top: 24px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Powered By (Bottom) */
+#splash-powered {
+  position: absolute;
+  bottom: 20px;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* Hide main content until splash ends */
+#app-content {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔵 SPLASH SCREEN -->
+<div id="splash-screen">
+  <img src="splash.png" alt="Krushi Bazaar Splash">
+  <div id="splash-title">कृषी बाजार</div>
+  <div id="splash-powered">Powered by KRUSHISETU TECHNOLOGY</div>
 </div>
+
+<!-- 🟢 MAIN APP CONTENT -->
+<div id="app-content">
+  <!-- तुमचा अँपचा सगळा कोड इथे -->
+  <h2>Krushi Bazaar App Loaded</h2>
+</div>
+
+<script>
+  // Splash duration (3 seconds)
+  setTimeout(() => {
+    document.getElementById("splash-screen").style.display = "none";
+    document.getElementById("app-content").style.display = "block";
+  }, 3000);
+</script>
+
+</body>
+</html>
 
 <script>
 setTimeout(function(){
