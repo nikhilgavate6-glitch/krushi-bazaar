@@ -50,15 +50,40 @@
 </head>
 
 <body>
-<!-- SPLASH SCREEN START -->
-<div id="splash">
-  <div class="splash-content">
-    <img src="splash.png" alt="Krushi Bazaar Splash">
-    <h1>कृषी बाजार</h1>
-    <p class="powered">Powered by KRUSHISETU TECHNOLOGY</p>
-  </div>
-</div>
-<!-- SPLASH SCREEN END -->
+/* SPLASH SCREEN */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+#splash img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#splash h1 {
+  position: absolute;
+  top: 40px;
+  font-size: 26px;
+  color: #2e7d32;
+}
+
+#splash p {
+  position: absolute;
+  bottom: 30px;
+  font-size: 12px;
+  color: #ffffff;
+}
 
 <header>
   <h1>🌾 Krushi Bazaar</h1>
