@@ -212,7 +212,112 @@ body{
 </head>
 
 <body>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+}
 
+/* COMMON CARD */
+.card{
+    background:#fff;
+    border-radius:16px;
+    padding:16px;
+    margin:15px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* HEADER GREEN */
+.green-box{
+    background:#2e7d32;
+    color:#fff;
+    padding:25px 15px;
+    text-align:center;
+}
+
+.green-box h2{
+    margin:0;
+    font-size:22px;
+}
+
+.green-box p{
+    margin-top:8px;
+    font-size:14px;
+    opacity:0.9;
+}
+
+/* FORM */
+.form-row{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* BUTTON */
+.btn{
+    background:#2e7d32;
+    color:#fff;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    width:100%;
+    font-size:16px;
+    margin-top:15px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+}
+</style>
+
+<!-- KRUSHI BAZAAR HEADER -->
+<div class="green-box">
+    <h2>🌾 Krushi Bazaar</h2>
+    <p>शेतकरी आणि खरेदीदारांसाठी सोपं डिजिटल मार्केट</p>
+</div>
+
+<!-- SHETKARI FORM -->
+<div class="card">
+    <h3>👨‍🌾 शेतकरी – माल नोंदणी</h3>
+
+    <select>
+        <option>मालाचा प्रकार</option>
+        <option>भाजीपाला</option>
+        <option>धान्य</option>
+        <option>फळे</option>
+    </select>
+
+    <div class="form-row">
+        <input type="number" placeholder="वजन (क्विंटल)">
+        <input type="text" placeholder="मोबाईल नंबर">
+    </div>
+
+    <button class="btn whatsapp-btn">
+        📱 WhatsApp वर पाठवा
+    </button>
+</div>
+
+<!-- BUYER CARD -->
+<div class="card">
+    <h3>🏪 मला माल घ्यायचा आहे</h3>
+    <p>थेट आमच्याशी संपर्क साधा</p>
+
+    <button class="btn whatsapp-btn">
+        📱 WhatsApp संपर्क
+    </button>
+</div>
 <!-- HEADER -->
 <div class="header">
     <div class="back">←</div>
